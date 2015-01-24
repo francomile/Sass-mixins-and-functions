@@ -1,0 +1,35 @@
+/*
+============================
+ M E D I A   Q U E R I E S
+============================
+*/
+
+/*
+These measures for iPhones and iPads are based on old resolutions.
+You can then customize them to whatever your needs are.
+Follow a mobile-first approach.
+*/
+
+// Media Queries @mixin:
+@mixin respond-to($media) {
+    @if $media == iphone {
+        @media only screen and (min-width: 480px) { @content; } }
+    @else if $media == ipad {
+        @media only screen and (min-width: 768px) { @content; } }
+    @else if $media == laptop {
+        @media only screen and (min-width: 1280px) { @content; } } 
+    @else if $media == desktop {
+        @media only screen and (min-width: 1440px) { @content; } } 
+    @else if $media == large-desktop { 
+        @media only screen and (min-width: 1980px) {  @content; } } 
+    @else if $media == retina {
+        @media screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min--moz-device-pixel-ratio: 1.3), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 1.3), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) { @content; } }
+}
+
+
+/*
+Usage:
+.wrapper { 
+    @include respond-to(iphone) { width: 90%; }
+}
+*/
