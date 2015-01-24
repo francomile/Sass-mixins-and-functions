@@ -1,3 +1,3 @@
-# Sass-mixins Collection
+# Sass Collection (@mixins, @functions and $variables)
 
-####Collection of usefull Sass `@mixins` for Front-end Development. 
+####Handy collection of Sass `@mixins` `@functions` and `$variables`for Front-end Development. 
