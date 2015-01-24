@@ -1,0 +1,54 @@
+//===========================
+// typographic scale and rem:
+//===========================
+ 
+// This @mixins will give fallback in pixels for browsers that don´t support REM
+ 
+// Line-height and Base font-size:
+$line-height: 1.6;
+$base-font: 1rem;
+ 
+// Font-size mixin:
+@mixin font-size($size: 1, $line: $size * 1.6){
+font-size : ($size * 16) + px;
+line-height : ($line * 16) + px;
+font-size : $size + rem;
+line-height : $line + rem;
+}
+ 
+// Bottom margin @mixin:
+@mixin margin-bottom($margin: 1.6) {
+margin-bottom: ($margin * 16) + px;
+margin-bottom: $margin + rem;
+}
+ 
+// Top margin @mixin:
+@mixin margin-top($margin: 1.6) {
+margin-top: ($margin * 16) + px;
+margin-top: $margin + rem;
+}
+ 
+// Paragraph @mixin:
+@mixin margin-para($margin: 1.6) {
+margin-top: ($margin * 16) + px;
+margin-bottom: ($margin * 16) + px;
+margin-top: $margin + rem;
+margin-bottom: $margin + rem;
+}
+ 
+ 
+// Usage example:
+/*
+h1{ @include font-size(2.488);@include margin-top}
+h2{ @include font-size(2.16);@include margin-top;}
+h3{ @include font-size(1.5);@include margin-top}
+h4{ @include font-size(1.2);@include margin-top}
+h5{ @include font-size(1);@include margin-top}
+h6{ @include font-size(0.833);@include margin-top}
+p{
+@include font-size(1);
+@include margin-para;
+word-wrap: break-word;
+}
+*/
+
